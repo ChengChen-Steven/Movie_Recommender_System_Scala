@@ -10,6 +10,42 @@ Two methods will be used:
 We will be discussing slightly about the speed and accuracy in this case. 
 
 
+### Overview of the Business Problem / Datasets
+
+The Movie Lens datasets can be found in the following link: https://grouplens.org/datasets/movielens/.
+
+Download the dataset: ml-latest-small.zip. Once, you extract the zip archive, you will find multiple data files. In this problem, we will only use ratings.csv. However, you can combine other files to improve the performance of your recommendation system.
+
+You will also download testing file from Blackboard: testing_small.csv. The testing dataset is a subset of the original dataset, each containing two columns: <userId> and <movieId>. The file testing_small.csv (20256 records) is from ratings.csv in ml-latest-small. Your goal is to predict the ratings of every <userId> and <movieId> combination in the test files. You CANNOT use the ratings in the testing datasets to train your recommendation system. Specifically, you should first extract training data from the ratings.csv file downloaded from Movie Lens using the testing data. Then by using the training data, you will need to predict rate for movies in the testing dataset. You can use the testing data as your ground truth to evaluate the accuracy of your recommendation system.
+  
+ Example: Assuming ratings.csv contains 1 million records and the testing_small.csv contains two records: (12345, 2, 3) and (12345, 13, 4). You will need to first remove the ratings of user ID 12345 on movie IDs 2 and 13 from ratings.csv. You will then use the remaining records in the ratings.csv to train a recommendation system (1 million – 2 records). Finally, given the user ID 12345 and movie IDs 2 and 13, your system should produce rating predictions as close as 3 and 4, respectively.
+
+For short, use training set to build an algorithm and test using the test set. 
+
+I upload two datasets in this repository. 
+
+* rating.csv: training set
+* testing_small.csv: test set
+
+
+### Model 1: Model-based Collaborative Filtering (CF) Algorithm
+
+
+
+### Model 2: Item-based Collaborative Filtering (CF) Algorithm
+
+
+
+### Environment
+
+
+
+
+
+
+
+
+
 
 
 
