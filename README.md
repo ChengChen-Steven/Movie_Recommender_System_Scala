@@ -71,11 +71,37 @@ We evaluate this model based on time and RMSE (Root Mean Squared Error) on the t
 
 * RMSE: https://en.wikipedia.org/wiki/Root-mean-square_deviation
 
+Compare the result of two algroithms:
+
+* Model 1: Model-based Collaborative Filtering (CF) Algorithm
+Time: 
+RMSE on test set: 
+
+* Model 2: Item-based Collaborative Filtering (CF) Algorithm
+Time: 
+RMSE on test set: 
+
 
 ### 5. Environment
 
+* Set environment and start spark-submit first in Terminal:
+
+  export SPARK_HOME=~/spark-1.6.1-bin-hadoop2.4/
+  export PATH=$SPARK_HOME/BIN:$PATH
+  spark-submit
+  
+* Enter following commands in Terminal to run the file:
+
+  spark-submit --master local[*] --class Cheng_Chen_task1 jar_filepath ratings.csv_filepath testing_small.csv_filepath
 
 
+### 6. Side concept
+
+* Deal with the missing values
+
+* Deal with predictions out of bound
+
+* Deal with 
 
 
 
