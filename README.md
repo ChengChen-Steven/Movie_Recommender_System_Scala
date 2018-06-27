@@ -5,7 +5,7 @@ This is a course project which leveraged Spark to build a movie recommender syst
 Two methods will be used:
 
 1. Alternating Least Squares (ALS) algorithm in spark.mllib; 
-2. Item-based Collaborative Filtering from scratch; 
+2. Neighbourhood-based (item-based in this case) Collaborative Filtering from scratch; 
 
 We will be discussing slightly about the speed and accuracy in this case. 
 
@@ -49,15 +49,19 @@ In this project, we import org.apache.spark.mllib.recommendation.ALS and directl
 
 We use item-based collabortive filtering instead of user-based collaborative filtering since in the case of movie recommender, the size of total movies are significantly smaller than the size of the users. Thinking about Netflix, they have over 100MM users and less than maybe 1000 movies. So using item-based collaborative filtering in this case will help reduce the computational time which is usually the biggest bottleneck of this kind of CF algorithm. 
 
-* 
-To 
-learn 
-more 
-about 
+* To learn more about user-based CF algorithm or item-based CF algorithm:
+https://en.wikipedia.org/wiki/Collaborative_filtering (Memory-based section)
+
+You need to build everything by yourself to make this algorithm work. 
 
 
 ### 4. Model Evalutaion
 
+We evaluate this model based on time and RMSE (Root Mean Squared Error) on the test set.
+
+\begin{equation*}
+\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+\end{equation*}
 
 
 ### 5. Environment
