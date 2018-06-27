@@ -10,7 +10,7 @@ Two methods will be used:
 We will be discussing slightly about the speed and accuracy in this case. 
 
 
-### Overview of the Business Problem / Datasets
+### 1. Overview of the Business Problem / Datasets
 
 The Movie Lens datasets can be found in the following link: https://grouplens.org/datasets/movielens/.
 
@@ -24,19 +24,32 @@ For short, use training set to build an algorithm and test using the test set.
 
 I upload two datasets in this repository. 
 
-* rating.csv: training set
+* rating.csv: training set + test set
+Attributes: userId, movieId, rating, timestamp
+
 * testing_small.csv: test set
+Attributes: userId, movieId
 
 
-### Model 1: Model-based Collaborative Filtering (CF) Algorithm
+### 2. Model 1: Model-based Collaborative Filtering (CF) Algorithm
+
+User the collaborative filtering algorithm in Spark MLlib. Collaborative filtering is commonly used for recommender systems. These techniques aim to fill in the missing entries of a user-item association matrix. spark.mllib currently supports model-based collaborative filtering, in which users and products are described by a small set of latent factors that can be used to predict missing entries. spark.mllib uses the alternating least squares (ALS) algorithm to learn these latent factors. 
 
 
 
-### Model 2: Item-based Collaborative Filtering (CF) Algorithm
+
+
+### 3. Model 2: Item-based Collaborative Filtering (CF) Algorithm
 
 
 
-### Environment
+### 4. Model Evalutaion
+
+
+
+### 5. Environment
+
+
 
 
 
