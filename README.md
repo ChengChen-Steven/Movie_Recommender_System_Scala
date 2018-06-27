@@ -42,7 +42,10 @@ http://spark.apache.org/docs/latest/mllib-collaborative-filtering.html
 (1) Google for intros.
 (2) If you want someone to go through this concept through video/teaching. I will recommend you to watch the video of the Machine Learning course (https://www.coursera.org/learn/machine-learning) taught by Andrew Ng. It discussses about the concept of recommender systems and walks you through the math on Week 09. 
 
-In this project, we import org.apache.spark.mllib.recommendation.ALS and directly call the ALS.train(ratings, rank, numIterations, 0.01).
+In this project, 
+we import org.apache.spark.mllib.recommendation.ALS and 
+ call the ALS.train(ratings, rank, numIterations, 0.01) .
+In this project, we import org.apache.spark.mllib.recommendation.ALS and directly call the ALS.train(ratings, rank, numIterations, 0.01)directly.
 
 
 ### 3. Model 2: Item-based Collaborative Filtering (CF) Algorithm
