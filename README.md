@@ -60,7 +60,7 @@ Details about the input in the ALS.train() API:
 We use item-based collabortive filtering instead of user-based collaborative filtering since in the case of movie recommender, the size of total movies are significantly smaller than the size of the users. Thinking about Netflix, they have over 100MM users and less than maybe 1000 movies. So using item-based collaborative filtering in this case will help reduce the computational time which is usually the biggest bottleneck of this kind of CF algorithm. 
 
 * To learn more about user-based CF algorithm or item-based CF algorithm:
-https://en.wikipedia.org/wiki/Collaborative_filtering (Memory-based section)
+https://en.wikipedia.org/wiki/Collaborative_filtering (Memory-based section), espcially advantages & disadvantages;
 
 You need to build everything by yourself to make this algorithm work. 
 
@@ -95,13 +95,19 @@ RMSE on test set:
   spark-submit --master local[*] --class Cheng_Chen_task1 jar_filepath ratings.csv_filepath testing_small.csv_filepath
 
 
-### 6. Side concept
+### 6. Side Concepts
 
 * Deal with the missing values
 
+When there is a new item (movie in this case) which never appears in the training dataset, or there is a new user, the rating that corresponds to item-user pair would be assigned a constant number, e.g. 2.5, 3 or the mean(ratings). 
+
 * Deal with predictions out of bound
 
-* Deal with 
+Chance is that the algorithm would predict a value which has a rating out of the bound [0, 5] (actually [0.5, 5] is more accurate). We cap those out-of-bound ratings to the bound.
+
+* Build artifacts - Jar file
+
+Please browse the web for more details...
 
 
 
