@@ -2,6 +2,8 @@
 
 This is a course project which leveraged Spark to build a movie recommender system in Scala.
 
+Scala is such a lazy (sexy) language
+
 Two methods will be used:
 
 1. Alternating Least Squares (ALS) algorithm in spark.mllib; 
