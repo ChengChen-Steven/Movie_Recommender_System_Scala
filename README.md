@@ -24,10 +24,10 @@ For short, use training set to build an algorithm and test using the test set.
 
 I upload two datasets in this repository. 
 
-* rating.csv: training set + test set
+* rating.csv: training set + test set (~100K)
 Attributes: userId, movieId, rating, timestamp
 
-* testing_small.csv: test set
+* testing_small.csv: test set (~20K)
 Attributes: userId, movieId
 
 
@@ -35,12 +35,25 @@ Attributes: userId, movieId
 
 User the collaborative filtering algorithm in Spark MLlib. Collaborative filtering is commonly used for recommender systems. These techniques aim to fill in the missing entries of a user-item association matrix. spark.mllib currently supports model-based collaborative filtering, in which users and products are described by a small set of latent factors that can be used to predict missing entries. spark.mllib uses the alternating least squares (ALS) algorithm to learn these latent factors. 
 
+* To learn more about collaborative filtering in Spark MLlib: 
+http://spark.apache.org/docs/latest/mllib-collaborative-filtering.html
 
+* To learn more about ALS Matrix Factorization: 
+(1) Google for intros.
+(2) If you want someone to go through this concept through video/teaching. I will recommend you to watch the video of the Machine Learning course (https://www.coursera.org/learn/machine-learning) taught by Andrew Ng. It discussses about the concept of recommender systems and walks you through the math on Week 09. 
 
+In this project, we import org.apache.spark.mllib.recommendation.ALS and directly call the ALS.train(ratings, rank, numIterations, 0.01).
 
 
 ### 3. Model 2: Item-based Collaborative Filtering (CF) Algorithm
 
+We use item-based collabortive filtering instead of user-based collaborative filtering since in the case of movie recommender, the size of total movies are significantly smaller than the size of the users. Thinking about Netflix, they have over 100MM users and less than maybe 1000 movies. So using item-based collaborative filtering in this case will help reduce the computational time which is usually the biggest bottleneck of this kind of CF algorithm. 
+
+* 
+To 
+learn 
+more 
+about 
 
 
 ### 4. Model Evalutaion
