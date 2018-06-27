@@ -42,10 +42,17 @@ http://spark.apache.org/docs/latest/mllib-collaborative-filtering.html
 (1) Google for intros.
 (2) If you want someone to go through this concept through video/teaching. I will recommend you to watch the video of the Machine Learning course (https://www.coursera.org/learn/machine-learning) taught by Andrew Ng. It discussses about the concept of recommender systems and walks you through the math on Week 09. 
 
-In this project, 
-we import org.apache.spark.mllib.recommendation.ALS and 
- call the ALS.train(ratings, rank, numIterations, 0.01) .
-In this project, we import org.apache.spark.mllib.recommendation.ALS and directly call the ALS.train(ratings, rank, numIterations, 0.01)directly.
+In this project, we will
+* import org.apache.spark.mllib.recommendation.ALS, 
+* call the ALS.train(ratings: RDD[Rating], rank: Int, iterations: Int, lambda: Double, blocks: Int) directly.
+
+Details about the input in the ALS.train() API: 
+>> Train a matrix factorization model given an RDD of ratings by users for a subset of products. The ratings matrix is approximated as the product of two lower-rank matrices of a given rank (number of features). To solve for these features, ALS is run iteratively with a configurable level of parallelism.
+* ratings: RDD of Rating objects with userID, productID, and rating
+* rank: number of features to use (also referred to as the number of latent factors)
+* numIterations: number of iterations of ALS
+* lambda: regularization parameter
+* blocks: level of parallelism to split computation into
 
 
 ### 3. Model 2: Item-based Collaborative Filtering (CF) Algorithm
@@ -62,9 +69,7 @@ You need to build everything by yourself to make this algorithm work.
 
 We evaluate this model based on time and RMSE (Root Mean Squared Error) on the test set.
 
-\begin{equation*}
-\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
-\end{equation*}
+* RMSE: https://en.wikipedia.org/wiki/Root-mean-square_deviation
 
 
 ### 5. Environment
