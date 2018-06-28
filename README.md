@@ -77,13 +77,13 @@ Compare the result of two algroithms:
 
 * Model 1: Model-based Collaborative Filtering (CF) Algorithm
 Absolute difference between predicted ratings and true ratings
->> case >=0 and <1: 14517; 
->> case >=1 and <2: 4857;
->> case >=2 and <3: 800
->> case >=3 and <4: 78
->> case >=4: 4
->> RSME = 0.9440353396410447
->> The total execution time taken is : 7.0894 sec.
+absdiff >=0 and <1: 14517
+absdiff case >=1 and <2: 4857
+absdiff case >=2 and <3: 800
+absdiff case >=3 and <4: 78
+absdiff case >=4: 4
+RSME = 0.9440353396410447
+The total execution time taken is : 7.0894 sec.
 
 * Model 2: Item-based Collaborative Filtering (CF) Algorithm
 >> case >=0 and <1: 15201
