@@ -84,6 +84,7 @@ Absolute difference between predicted ratings and true ratings
 >> case >=2 and <3: 800
 >> case >=3 and <4: 78
 >> case >=4: 4
+
 RSME = 0.9440353396410447
 The total execution time taken is : 7.0894 sec.
 
