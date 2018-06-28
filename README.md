@@ -26,10 +26,10 @@ For short, use training set to build an algorithm and test using the test set.
 
 I upload two datasets in this repository. 
 
-* rating.csv: training set + test set (~100K)
+* rating.csv: training set + test set (~100K) <br/>
 Attributes: userId, movieId, rating, timestamp
 
-* testing_small.csv: test set (~20K)
+* testing_small.csv: test set (~20K) <br/>
 Attributes: userId, movieId
 
 
@@ -37,11 +37,11 @@ Attributes: userId, movieId
 
 User the collaborative filtering algorithm in Spark MLlib. Collaborative filtering is commonly used for recommender systems. These techniques aim to fill in the missing entries of a user-item association matrix. spark.mllib currently supports model-based collaborative filtering, in which users and products are described by a small set of latent factors that can be used to predict missing entries. spark.mllib uses the alternating least squares (ALS) algorithm to learn these latent factors. 
 
-* To learn more about collaborative filtering in Spark MLlib: 
+* To learn more about collaborative filtering in Spark MLlib: <br/>
 http://spark.apache.org/docs/latest/mllib-collaborative-filtering.html
 
-* To learn more about ALS Matrix Factorization: 
-(1) Google for intros.
+* To learn more about ALS Matrix Factorization:  <br/>
+(1) Google for intros.  <br/>
 (2) If you want someone to go through this concept through video/teaching. I will recommend you to watch the video of the Machine Learning course (https://www.coursera.org/learn/machine-learning) taught by Andrew Ng. It discussses about the concept of recommender systems and walks you through the math on Week 09. 
 
 In this project, we will
@@ -61,10 +61,10 @@ Details about the input in the ALS.train() API:
 
 We use item-based collabortive filtering instead of user-based collaborative filtering since in the case of movie recommender, the size of total movies are significantly smaller than the size of the users. Thinking about Netflix, they have over 100MM users and less than maybe 1000 movies. So using item-based collaborative filtering in this case will help reduce the computational time which is usually the biggest bottleneck of this kind of CF algorithm. 
 
-* To learn more about user-based CF algorithm or item-based CF algorithm:
+* To learn more about user-based CF algorithm or item-based CF algorithm:  <br/>
 https://en.wikipedia.org/wiki/Collaborative_filtering (Memory-based section), espcially advantages & disadvantages;
 
-You need to build everything by yourself to make this algorithm work. 
+You need to build everything by yourself to make this algorithm work.  <br/>
 
 
 ### 4. Model Evalutaion
@@ -94,13 +94,13 @@ case >=4: 0 <br/>
 RMSE = 0.9365449062120714 <br/>
 The total execution time taken is : 23.8067 sec. (Very fast among peers) <br/>
 
-* Thoughts here:
-Comparing the performance of these two algorithms results based on the above results is not interesting because of the following reasons:
+* Thoughts here: <br/>
+Comparing the performance of these two algorithms results based on the above results is not interesting because of the following reasons:  <br/>
 1. Each algorithm has a lot of parameters/hyperparameters which we do not make the efforts to optimize.
 2. RMSE is simply one of the many metrics that would be suitable to this problem.  
 3. The test set is not huge enough to tell the difference
 
-* For more details about the comparsion of the two algorithms:
+* For more details about the comparsion of the two algorithms: <br/>
 Please check https://en.wikipedia.org/wiki/Collaborative_filtering for more details.
 
 
