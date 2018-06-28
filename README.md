@@ -94,6 +94,15 @@ The total execution time taken is : 7.0894 sec.
 RMSE = 0.9365449062120714
 The total execution time taken is : 23.8067 sec. (Very fast among peers)
 
+* Thoughts here:
+Comparing the performance of these two algorithms results based on the above results is not interesting because of the following reasons:
+1. Each algorithm has a lot of parameters/hyperparameters which we do not make the efforts to optimize.
+2. RMSE is simply one of the many metrics that would be suitable to this problem.  
+3. The test set is not huge enough to tell the difference
+
+* For more details about the comparsion of the two algorithms:
+Please check https://en.wikipedia.org/wiki/Collaborative_filtering for more details.
+
 
 ### 5. Environment
 
