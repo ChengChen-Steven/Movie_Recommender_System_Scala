@@ -75,10 +75,8 @@ We evaluate this model based on time and RMSE (Root Mean Squared Error) on the t
 
 Compare the result of two algroithms:
 
-* Model 1: Model-based Collaborative Filtering (CF) Algorithm
-
-Absolute difference between predicted ratings and true ratings
-
+* Model 1: Model-based Collaborative Filtering (CF) Algorithm  <br/>
+Absolute difference between predicted ratings and true ratings  <br/>
 case >=0 and <1: 14517 <br/>
 case >=1 and <2: 4857 <br/>
 case >=2 and <3: 800 <br/>
@@ -87,15 +85,14 @@ case >=4: 4 <br/>
 RSME = 0.9440353396410447 <br/>
 The total execution time taken is : 7.0894 sec.
 
-* Model 2: Item-based Collaborative Filtering (CF) Algorithm
-
->> case >=0 and <1: 15201
->> case >=1 and <2: 4131
->> case >=2 and <3: 802
->> case >=3 and <4: 122
->> case >=4: 0
->> RMSE = 0.9365449062120714
->> The total execution time taken is : 23.8067 sec. (Very fast among peers)
+* Model 2: Item-based Collaborative Filtering (CF) Algorithm <br/>
+case >=0 and <1: 15201 <br/>
+case >=1 and <2: 4131 <br/>
+case >=2 and <3: 802 <br/>
+case >=3 and <4: 122 <br/>
+case >=4: 0 <br/>
+RMSE = 0.9365449062120714 <br/>
+The total execution time taken is : 23.8067 sec. (Very fast among peers) <br/>
 
 * Thoughts here:
 Comparing the performance of these two algorithms results based on the above results is not interesting because of the following reasons:
