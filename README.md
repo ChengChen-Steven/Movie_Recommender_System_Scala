@@ -76,8 +76,8 @@ We evaluate this model based on time and RMSE (Root Mean Squared Error) on the t
 Compare the result of two algroithms:
 
 * Model 1: Model-based Collaborative Filtering (CF) Algorithm
-
 Absolute difference between predicted ratings and true ratings
+
 >> case >=0 and <1: 14517
 >> case >=1 and <2: 4857
 >> case >=2 and <3: 800
