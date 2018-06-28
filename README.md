@@ -2,7 +2,7 @@
 
 This is a course project which leveraged Spark to build a movie recommender system in Scala.
 
-Scala is such a lazy (sexy) language
+Scala is such a lazy (sexy) language. I am not an expert but definitely like this language. 
 
 Two methods will be used:
 
@@ -76,12 +76,23 @@ We evaluate this model based on time and RMSE (Root Mean Squared Error) on the t
 Compare the result of two algroithms:
 
 * Model 1: Model-based Collaborative Filtering (CF) Algorithm
-Time: 
-RMSE on test set: 
+Absolute difference between predicted ratings and true ratings
+>=0 and <1: 14517
+>=1 and <2: 4857
+>=2 and <3: 800
+>=3 and <4: 78
+>=4: 4
+RSME = 0.9440353396410447
+The total execution time taken is : 7.0894 sec.
 
 * Model 2: Item-based Collaborative Filtering (CF) Algorithm
-Time: 
-RMSE on test set: 
+>=0 and <1: 15201
+>=1 and <2: 4131
+>=2 and <3: 802
+>=3 and <4: 122
+>=4: 0
+RMSE = 0.9365449062120714
+The total execution time taken is : 23.8067 sec. (Very fast among peers)
 
 
 ### 5. Environment
