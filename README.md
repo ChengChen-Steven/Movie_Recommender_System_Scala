@@ -88,7 +88,6 @@ The total execution time taken is : 7.0894 sec.
 
 * Model 2: Item-based Collaborative Filtering (CF) Algorithm
 
-Absolute difference between predicted ratings and true ratings
 >> case >=0 and <1: 15201
 >> case >=1 and <2: 4131
 >> case >=2 and <3: 802
